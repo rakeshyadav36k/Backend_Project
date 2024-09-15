@@ -1,4 +1,4 @@
-/**
+/*
  * This will be the starting file of the project
  */
 
