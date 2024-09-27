@@ -11,7 +11,7 @@ const db_config = require("./configs/db.config")
 const user_model = require("./models/user.model")
 const bcrypt = require("bcryptjs")
 
-app.use(express.json()) // middleware | when we pass request body as JSON, It read as JS object
+app.use(express.json()) // middleware | when we pass request body as JSON, by using this middleware, It read as JS object
 
 
 /**
