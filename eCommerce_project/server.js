@@ -70,7 +70,7 @@ async function init(){
  */
 
 require("./routes/auth.routes")(app)   // call routes and passing app object
-
+require("./routes/category.routes")(app)
 
 
 
