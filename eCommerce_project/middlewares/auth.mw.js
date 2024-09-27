@@ -65,6 +65,36 @@ const verifySignInBody = (req, res, next)=>{
     next();
 }
 
+const verifyToken = (req, res, next)=>{
+    // Check if the token is present in the header
+    const token = req.headers['x-access-token']
+
+    if(!token){
+        return res.status(403).send({
+            message : "No token found : UnAuthorized"
+        })
+    }
+    // If it's the valid token
+    jwt.verify(token, auth_config.secret, async (err, decoded)=>{
+        if(err){
+            return res.status(401).send({
+                message : "UnAuthorized !"
+            })
+        }
+        const user = await user_model.findOne({userId : decoded.id})
+        if(!user){
+            return res.status(400).send({
+                message : "UnAuthorized, this user for this token does't exist"
+            })
+        }
+        // Set the user info in the req body
+        req.user = user
+
+        next()
+    })
+
+    // then move to next step
+}
 
 module.exports = {
     verifySignUpBody : verifySignUpBody,
