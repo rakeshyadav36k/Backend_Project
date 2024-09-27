@@ -96,7 +96,20 @@ const verifyToken = (req, res, next)=>{
     // then move to next step
 }
 
+const isAdmin = (req, res, next)=>{
+    const user = req.user
+    if(user && user.userType == "ADMIN"){
+        next()
+    }else{
+        return res.status(403).send({
+            message : "Only ADMIN users are allowed to access this endpoints"
+        })
+    }
+}
+
 module.exports = {
     verifySignUpBody : verifySignUpBody,
-    verifySignInBody : verifySignInBody
+    verifySignInBody : verifySignInBody,
+    verifyToken : verifyToken,
+    isAdmin : isAdmin
 }
