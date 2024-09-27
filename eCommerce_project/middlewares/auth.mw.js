@@ -1,5 +1,7 @@
 
 const user_model = require("../models/user.model")
+const jwt = require("jsonwebtoken")
+const auth_config = require("../configs/auth.config")
 
 /**
  * Create a mw will check if the request body is proper and correct
@@ -47,7 +49,24 @@ const verifySignUpBody =async (req, res, next)=>{
     }
 }
 
+const verifySignInBody = (req, res, next)=>{
+
+    if(!req.body.userId){
+        return res.status(400).send({
+            message : "userId is not provided"
+        })
+    }
+    if(!req.body.password){
+        return res.status(400).send({
+            message : "password is not provided"
+        })
+    }
+
+    next();
+}
+
 
 module.exports = {
-    verifySignUpBody : verifySignUpBody
+    verifySignUpBody : verifySignUpBody,
+    verifySignInBody : verifySignInBody
 }
