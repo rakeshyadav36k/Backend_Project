@@ -8,7 +8,6 @@ const category_model = require("../models/category.model")
  */
 
 exports.createNewCategory = async (req, res)=>{
-
     // Read the req body
 
     // Create the category object
