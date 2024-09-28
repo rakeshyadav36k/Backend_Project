@@ -19,6 +19,7 @@ app.use(express.json()) // middleware | when we pass request body as JSON, by us
  * application if not already present
  */
 
+
 // Connection with MongoDB
 mongoose.connect(db_config.DB_URL)
 
@@ -66,7 +67,7 @@ async function init(){
 
 
 /**
- * Stich the route to the server
+ * Stich / connect the route to the server 
  */
 
 require("./routes/auth.routes")(app)   // call routes and passing app object
