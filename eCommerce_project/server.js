@@ -76,7 +76,6 @@ require("./routes/category.routes")(app)
 
 
 
-
 /**
  * Start the server
  */
