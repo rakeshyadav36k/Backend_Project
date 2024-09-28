@@ -13,7 +13,7 @@ module.exports = (app)=>{
 
     /**
      * route for
-     * POST localhost:8080/ecomm/api/v1/auth/signin
+     * POST 127.0.0.1:8080/ecomm/api/v1/auth/signin
      */
     app.post("/ecomm/api/v1/auth/signin", authController.signin)
 }
