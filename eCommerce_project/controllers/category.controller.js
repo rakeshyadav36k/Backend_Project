@@ -3,6 +3,7 @@ const category_model = require("../models/category.model")
 /**
  * Controller for creating the category
  * 
+ * 
  *  POST 127.0.0.1:8080/ecomm/api/v1/categories
  * 
  */
