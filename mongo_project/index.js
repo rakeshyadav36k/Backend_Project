@@ -3,6 +3,7 @@ const studentModel = require("./model/student.model1")
 /**
  *  Write  the code to connect with MongoDB
  */
+
 // mongoose.connect("mongodb://localhost/be_demodb")  //if it does not work, replace 'localhost' to '127.0.0.1'
 mongoose.connect("mongodb://127.0.0.1/be_demodb") //
 
