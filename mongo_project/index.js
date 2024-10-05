@@ -55,6 +55,7 @@ async function dbQueries(){
     }
 
     // I want to go and search based on name
+    // there are different method to find data from db
     try{
         // const students = await studentModel.find({name:"Rakesh"})
         // const students = await studentModel.find({})  // acts like a find all
