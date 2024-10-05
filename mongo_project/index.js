@@ -65,7 +65,6 @@ async function dbQueries(){
         console.log(err)
     }
 
-
     /**
      * Deal with the multiple conditions
      */
