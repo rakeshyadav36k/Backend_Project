@@ -2,6 +2,7 @@
  * 1. Define the schema of students collection to be
  * stored in the DB
  */
+
 const mongoose = require("mongoose")
 
 // 2. Schema with constraints
