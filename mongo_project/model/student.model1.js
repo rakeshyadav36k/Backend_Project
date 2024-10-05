@@ -29,7 +29,8 @@ const studentSchema = new mongoose.Schema({
             return Date.now()
         }
     } */
-}, {versionKey : false, timestamps : true})
+}, {versionKey : false, timestamps : true})   // by using 'timestamp' - 'createdAt' and 'modifyAt' show in the DB
+                                                            
 
 // 3. Go ahead and create corresponding collection in DB
 module.exports = mongoose.model("Student", studentSchema) //("Name of the collection", schema of the documents)
