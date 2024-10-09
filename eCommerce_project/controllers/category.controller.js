@@ -27,6 +27,6 @@ exports.createNewCategory = async (req, res)=>{
             message : "Error while creating the category"
         })
     }
-
+    
     // return the response of the created category
 }
