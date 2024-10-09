@@ -1,5 +1,5 @@
 /*
- * This will be the starting file of the project
+ * This will be the starting / entry file of the project
  */
 
 const express = require("express")
