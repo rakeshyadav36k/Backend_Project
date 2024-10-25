@@ -75,7 +75,6 @@ async function dbQueries(){
     /**
      * Delete one documents where name = "Vishwa"
      */
-
     const student = await studentModel.deleteOne({name : "Vishwa"})
     console.log(student)
 }
